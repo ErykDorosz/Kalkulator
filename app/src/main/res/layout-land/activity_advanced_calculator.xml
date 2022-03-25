@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdvancedCalculatorActivity">
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        android:textSize="30sp"
+        android:autofillHints="false"
+        android:inputType="none"
+        android:textAlignment="textEnd"
+        tools:ignore="LabelFor"
+        app:layout_constraintBottom_toTopOf="@id/horizontalStart"
+        app:layout_constraintDimensionRatio="11:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd4"
+        app:layout_constraintStart_toStartOf="@id/verticalStart1" />
+
+    <Button
+        android:id="@+id/backspaceButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/red_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="⌫"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd1"
+        app:layout_constraintStart_toStartOf="@id/verticalStart1"
+        app:layout_constraintTop_toTopOf="@id/horizontal1" />
+
+    <Button
+        android:id="@+id/sinButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/purple_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="sinButton"
+        android:text="sin"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd5"
+        app:layout_constraintStart_toStartOf="@id/verticalStart5"
+        app:layout_constraintTop_toTopOf="@id/horizontal1" />
+
+    <Button
+        android:id="@+id/sqrtButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/purple_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="sqrtButton"
+        android:text="sqrt"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd4"
+        app:layout_constraintStart_toStartOf="@id/verticalStart4"
+        app:layout_constraintTop_toTopOf="@id/horizontal1" />
+
+    <Button
+        android:id="@+id/number7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="7"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd1"
+        app:layout_constraintStart_toStartOf="@id/verticalStart1"
+        app:layout_constraintTop_toTopOf="@id/horizontal2" />
+
+    <Button
+        android:id="@+id/number4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="4"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd1"
+        app:layout_constraintStart_toStartOf="@id/verticalStart1"
+        app:layout_constraintTop_toTopOf="@id/horizontal3" />
+
+    <Button
+        android:id="@+id/number1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd1"
+        app:layout_constraintStart_toStartOf="@id/verticalStart1"
+        app:layout_constraintTop_toTopOf="@id/horizontal4" />
+
+    <Button
+        android:id="@+id/number0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd1"
+        app:layout_constraintStart_toStartOf="@id/verticalStart1"
+        app:layout_constraintTop_toTopOf="@id/horizontal5" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/red_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="C"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd2"
+        app:layout_constraintStart_toStartOf="@id/verticalStart2"
+        app:layout_constraintTop_toTopOf="@id/horizontal1" />
+
+    <Button
+        android:id="@+id/cosButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/purple_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="cosButton"
+        android:text="cos"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd5"
+        app:layout_constraintStart_toStartOf="@id/verticalStart5"
+        app:layout_constraintTop_toTopOf="@id/horizontal2" />
+
+    <Button
+        android:id="@+id/squareButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/purple_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="squareButton"
+        android:text="x^2"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd4"
+        app:layout_constraintStart_toStartOf="@id/verticalStart4"
+        app:layout_constraintTop_toTopOf="@id/horizontal2" />
+
+    <Button
+        android:id="@+id/number8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="8"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd2"
+        app:layout_constraintStart_toStartOf="@id/verticalStart2"
+        app:layout_constraintTop_toTopOf="@id/horizontal2" />
+
+    <Button
+        android:id="@+id/number5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="5"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd2"
+        app:layout_constraintStart_toStartOf="@id/verticalStart2"
+        app:layout_constraintTop_toTopOf="@id/horizontal3" />
+
+    <Button
+        android:id="@+id/number2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd2"
+        app:layout_constraintStart_toStartOf="@id/verticalStart2"
+        app:layout_constraintTop_toTopOf="@id/horizontal4" />
+
+    <Button
+        android:id="@+id/dotButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd2"
+        app:layout_constraintStart_toStartOf="@id/verticalStart2"
+        app:layout_constraintTop_toTopOf="@id/horizontal7" />
+
+    <Button
+        android:id="@+id/tanButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/purple_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="tanButton"
+        android:text="tan"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd5"
+        app:layout_constraintStart_toStartOf="@id/verticalStart5"
+        app:layout_constraintTop_toTopOf="@id/horizontal3" />
+
+    <Button
+        android:id="@+id/powerButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/purple_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="powerButton"
+        android:text="x^y"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd3"
+        app:layout_constraintStart_toStartOf="@id/verticalStart3"
+        app:layout_constraintTop_toTopOf="@id/horizontal1" />
+
+    <Button
+        android:id="@+id/number9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="9"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd3"
+        app:layout_constraintStart_toStartOf="@id/verticalStart3"
+        app:layout_constraintTop_toTopOf="@id/horizontal2" />
+
+    <Button
+        android:id="@+id/number6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="6"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd3"
+        app:layout_constraintStart_toStartOf="@id/verticalStart3"
+        app:layout_constraintTop_toTopOf="@id/horizontal3" />
+
+    <Button
+        android:id="@+id/number3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/green_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="3"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd3"
+        app:layout_constraintStart_toStartOf="@id/verticalStart3"
+        app:layout_constraintTop_toTopOf="@id/horizontal4" />
+
+    <Button
+        android:id="@+id/equalsButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/orange_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="="
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalStart"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd5"
+        app:layout_constraintStart_toStartOf="@id/verticalStart5" />
+
+    <Button
+        android:id="@+id/changeSignButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="+/-"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd4"
+        app:layout_constraintStart_toStartOf="@id/verticalStart4"
+        app:layout_constraintTop_toTopOf="@id/horizontal3" />
+
+    <Button
+        android:id="@+id/logNormButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/purple_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="logNormButton"
+        android:text="ln"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd5"
+        app:layout_constraintStart_toStartOf="@id/verticalStart5"
+        app:layout_constraintTop_toTopOf="@id/horizontal4" />
+
+    <Button
+        android:id="@+id/logButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/purple_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="logButton"
+        android:text="log"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd5"
+        app:layout_constraintStart_toStartOf="@id/verticalStart5"
+        app:layout_constraintTop_toTopOf="@id/horizontal5" />
+
+    <Button
+        android:id="@+id/divisionButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="/"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd4"
+        app:layout_constraintStart_toStartOf="@id/verticalStart4"
+        app:layout_constraintTop_toTopOf="@id/horizontal4" />
+
+    <Button
+        android:id="@+id/multiplicationButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="*"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd4"
+        app:layout_constraintStart_toStartOf="@id/verticalStart4"
+        app:layout_constraintTop_toTopOf="@id/horizontal5" />
+
+    <Button
+        android:id="@+id/subtractionButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd3"
+        app:layout_constraintStart_toStartOf="@id/verticalStart3"
+        app:layout_constraintTop_toTopOf="@id/horizontal7" />
+
+    <Button
+        android:id="@+id/additionButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue_rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="buttonClicked"
+        android:text="+"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="@id/verticalEnd4"
+        app:layout_constraintStart_toStartOf="@id/verticalStart4"
+        app:layout_constraintTop_toTopOf="@id/horizontal7" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalStart1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalEnd1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.19" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalStart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.24" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalEnd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalStart3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalEnd3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalStart4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalEnd4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.76" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalStart5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.81" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalEnd5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalCStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verticalCEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+</android.support.constraint.ConstraintLayout>
